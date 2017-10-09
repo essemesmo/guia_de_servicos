@@ -8,13 +8,13 @@ LEMBRANDO que as .class e .java pertecem ao package guia_de_servicos, logo devem
 
 Melhor FORMATO de diretórios:
 
-Guia_de_Servicos/
+    Guia_de_Servicos/
 
-                /lib/ (arquivos .jar aqui)
+                    /lib/ (arquivos .jar aqui)
                 
-                /build/classes/guia_de_servicos/ (arquvios .class aqui)
+                    /build/classes/guia_de_servicos/ (arquvios .class aqui)
                 
-                /src/guia_de_servicos/ (arquivos .java aqui)
+                    /src/guia_de_servicos/ (arquivos .java aqui)
                
 Para executar o programa com o FORMATO acima:
 
