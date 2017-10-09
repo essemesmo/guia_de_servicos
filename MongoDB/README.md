@@ -1,6 +1,6 @@
 Retirado do ABOUT US do site do MongoDB:
 
-    "MongoDB is the leading modern, general purpose database platform, designed to unleash the power of software and data for developers and the applications they build. Headquartered in New York, with offices across North America, Europe, and Asia-Pacific, we are close to where you do business. MongoDB has more than 4,300 customers in over 85 countries, including more than half of the global Fortune 100. The MongoDB database platform has been downloaded over 30 million times and there have been more than 730,000 MongoDB University registrations."
+"MongoDB is the leading modern, general purpose database platform, designed to unleash the power of software and data for developers and the applications they build. Headquartered in New York, with offices across North America, Europe, and Asia-Pacific, we are close to where you do business. MongoDB has more than 4,300 customers in over 85 countries, including more than half of the global Fortune 100. The MongoDB database platform has been downloaded over 30 million times and there have been more than 730,000 MongoDB University registrations."
 
 site oficial: https://www.mongodb.com/.
 
