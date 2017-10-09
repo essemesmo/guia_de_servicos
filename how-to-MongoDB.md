@@ -16,7 +16,7 @@ Iniciar o serviço MongoDB:
 
 2- Se o MongoDB não tiver sido configurado com serviço Windows, para iniciar o mongod.exe deve-se executar o comando no prompt: "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" SE ESSE FOR O DIRETÓRIO A QUAL ELE SE ENCONTRA.
 
-3- É importante parar o serviço uma vez que esse não estiver sendo utilizado, para poupar memória, com o comando net stop MongoDB ou simplesmente inserindo Crt+C no prompt.
+3- É importante parar o serviço uma vez que esse não estiver sendo utilizado, para poupar memória, com o comando: net stop MongoDB , ou inserindo Crt+C no prompt a qual mongod.exe estiver aberto.
 
 
 
