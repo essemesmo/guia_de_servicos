@@ -8,4 +8,4 @@ MongoDB é uma plataforma de gerenciamento de banco de dados orientado a documen
 
 A edição utilizada e necessária para executar o projeto é a Community Server, download em: https://www.mongodb.com/download-center#community.
 
-O serviço MongoDB deve ser instalado e inicializado para a correta execução do projeto, siga o passo a passo em como-utilzar.md.
+O serviço MongoDB deve ser instalado e inicializado para a correta execução do projeto, siga o passo a passo em how-to-MongoDB.md.
