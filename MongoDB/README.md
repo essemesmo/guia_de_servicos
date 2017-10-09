@@ -4,7 +4,7 @@ Retirado do ABOUT US do site do MongoDB:
 
 site oficial: https://www.mongodb.com/.
 
-MongoDB é uma plataforma de gerenciamento de banco de dados orientado a documentos, o projeto Guia de Serviços utiliza esse gerenciador para cadastrar e manipular dados de prestadores de serviço e clientes.
+MongoDB é uma plataforma de gerenciamento de banco de dados orientada a documentos, o projeto Guia de Serviços utiliza esse gerenciador para cadastrar e manipular dados de prestadores de serviço e clientes.
 
 A edição utilizada e necessária para executar o projeto é a Community Server, download em: https://www.mongodb.com/download-center#community.
 
