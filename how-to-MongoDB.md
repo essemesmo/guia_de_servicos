@@ -12,7 +12,7 @@ Configure a Windows Service for MongoDB Community Edition;
 
 Iniciar o serviço MongoDB:
 
-1- Seguindo com sucesso a instalação acima para windows, para iniciar mongod.exe basta entrar no cmd em modo de privilégio e escrever: net start MongoDB, para desligar: net stop MongoDB.
+1- Seguindo com sucesso a instalação acima para windows, para iniciar mongod.exe basta entrar no cmd em modo de privilégio e escrever: net start MongoDB. Para desligar: net stop MongoDB.
 
 2- Se o MongoDB não tiver sido configurado como serviço no Windows, para iniciar o mongod.exe deve-se executar o comando no prompt: "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" SE ESSE FOR O DIRETÓRIO A QUAL ELE SE ENCONTRA.
 
