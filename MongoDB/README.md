@@ -6,6 +6,6 @@ site oficial: https://www.mongodb.com/.
 
 MongoDB é uma plataforma de gerenciamento de banco de dados orientado a documentos, o projeto Guia de Serviços utiliza esse gerenciador para cadastrar e manipular dados de prestadores de serviço e clientes.
 
-A edição utilizada e necessária para executar o projeto é a Community Server, download em: https://www.mongodb.com/download-center?jmp=tutorials&_ga=2.70365335.621958033.1507569635-1768884414.1504481958#community.
+A edição utilizada e necessária para executar o projeto é a Community Server, download em: https://www.mongodb.com/download-center#community.
 
 O serviço MongoDB deve ser instalado e inicializado para a correta execução do projeto, siga o passo a passo em como-utilzar.md.
