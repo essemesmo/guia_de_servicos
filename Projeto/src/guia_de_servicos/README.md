@@ -23,7 +23,5 @@ Polimorfismo:
     funcionalidades de objetos concretos das subclasses Cadastro_Prestadores e Cadastro_Clientes.
 
 Classes abstratas:
-    
-    Classe abstrata Cliente não possui métodos abstratos, não deve ser instânciada,
-    
+
     Classe abstrata Banco possui métodos abstratos, não deve ser instânciada.
