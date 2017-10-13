@@ -3,7 +3,7 @@ package guia_de_servicos;
 /**
 * Classe Usuario carrega as informações sobre básicas dos usuários.
 */
-abstract public class Usuario 
+public class Usuario 
 {
     /**
      * Método get do atributo regiao.
