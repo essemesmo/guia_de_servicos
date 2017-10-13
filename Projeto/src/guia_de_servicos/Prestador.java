@@ -1,7 +1,5 @@
 package guia_de_servicos;
 
-import java.util.Scanner;
-
 /**
  * Classe Prestador carrega informações básicas da superclasse somados
  * à caracteristicas próprias.
@@ -105,24 +103,23 @@ public class Prestador extends Usuario
     /**
      * Método sobrecarregado da classe Usuario lê as entradas de
      * cadastramento do clientes.
-     * @param INPUT referência ao objeto tipo Scanner do menu. 
      */    
     @Override
-    public void preencherCampos(Scanner INPUT) 
+    public void preencherCampos() 
     {    
-        super.preencherCampos(INPUT);
+        super.preencherCampos();
         
         System.out.print("Informe cnpj: ");
-        setCnpj(INPUT.nextLine());       
+        setCnpj(Console.getLine());       
         
         System.out.print("Informe especificacao: ");
-        setEspecificacao(INPUT.nextLine());
+        setEspecificacao(Console.getLine());
 
         System.out.print("Informe descricao: ");
-        setDescricao(INPUT.nextLine());
+        setDescricao(Console.getLine());
  
         System.out.print("Informe custo: ");
-        setCusto(INPUT.nextDouble());
+        setCusto(Console.getDouble());
     } 
     
     /**

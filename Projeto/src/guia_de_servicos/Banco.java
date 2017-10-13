@@ -35,15 +35,25 @@ abstract public class Banco
     
     /**
      * Método de busca abstrado implementado pelas subclasses.
-     * @param campo
-     * @param txt
      */
-    abstract public void buscar(String campo, String txt);
+    abstract public void buscar();
 
+    /**
+     * Método de adicionar objetos abstrato, implementado pelas subclasses.
+     */
+    abstract public void adicionar();
+    
     /**
      * Método de impressão abstrato implementado pelas subclasses.
      */    
     abstract public void imprimirTodos(); 
+    
+    /**
+     * Método abstrato que retorna uma String com o Campo a ser pesquisado,
+     * implementado pelas subclasses.
+     * @return String
+     */
+    abstract public String entrarCampo();
     
     /**
      * Método encerra conexão com o banco MongoDB.
@@ -51,6 +61,16 @@ abstract public class Banco
     public final void closeConnection() {
         Banco.mongoClient.close();
     };
+    
+    /**
+     * Método retorna a String que deve ser reconhecida no banco.
+     * @return - String
+     */
+    protected String entrarBusca() 
+    {
+        System.out.print("Buscar por: ");
+        return Console.getLine();
+    }    
     
     protected static MongoClient mongoClient;
     protected final MongoDatabase database;

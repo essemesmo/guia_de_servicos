@@ -1,7 +1,5 @@
 package guia_de_servicos;
 
-import java.util.Scanner;
-
 /**
  * Classe Menu carrega o laço principal de cadastramento de Prestadores.
  */
@@ -11,11 +9,10 @@ public class Menu
      * Construtor inicializa atributos padrão do objeto tipo Menu.
      * @param cadastro referência à um objeto do tipo ArrayList.
      */
-    public Menu(Cadastro_Prestadores cadastro) 
+    public Menu(Banco cadastro) 
     {
         Menu.opcao = '\0';
         this.cadastro = cadastro;
-        INPUT = new Scanner(System.in);
     }
     
     /**
@@ -43,18 +40,15 @@ public class Menu
     /**
      * Método executado quando a opção 1 é escolhida.
      */
-    private void case_1()
-    {
-        Prestador prestador = new Prestador();
-        prestador.preencherCampos(INPUT);
-        this.cadastro.adicionar(prestador);
+    private void case_1() {
+        this.cadastro.adicionar();
     }
 
     /**
      * Método executado quando a opção 2 é escolhida.
      */
     private void case_2() {
-        this.cadastro.buscar( entrarCampo(), entrarBusca() );   
+        this.cadastro.buscar();   
     }
     
     /**
@@ -78,39 +72,10 @@ public class Menu
         + "0: Sair" + "\n"
         + "Opcao: " );    
         
-        char op = INPUT.next().charAt(0);
-        INPUT.nextLine();
+        char op = Console.getChar();
         
         return op;
-    }   
-    
-    /**
-     * Método retorna a String que deve ser reconhecida no banco.
-     * @return - String
-     */
-    private String entrarBusca() 
-    {
-        System.out.print("Buscar por: ");
-        return INPUT.nextLine();
-    }
-    
-    /**
-     * Método retorna o campo a ser pesquisado no banco.
-     * @return - String
-     */
-    private String entrarCampo()
-    {        
-        System.out.print
-        ( "Campos de Busca:" + "\n"
-        + "por nome: nome" + "\n"
-        + "por endereco: endereco" + "\n"
-        + "por telefone: telefone" + "\n"
-        + "por especificacao: especificacao" + "\n"
-        + "por descricao: descricao" + "\n"
-        + "Campo: ");
-        
-        return INPUT.nextLine();
-    }    
+    }       
     
     /**
      * Método get do atributo (char) opcao.
@@ -128,7 +93,6 @@ public class Menu
         Menu.opcao = opcao;
     }
 
-    private final Cadastro_Prestadores cadastro;
+    private final Banco cadastro;
     private static char opcao;
-    private static Scanner INPUT;    
 }

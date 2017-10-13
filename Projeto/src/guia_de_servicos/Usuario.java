@@ -1,7 +1,5 @@
 package guia_de_servicos;
 
-import java.util.Scanner;
-
 /**
 * Classe Usuario carrega as informações sobre básicas dos usuários.
 */
@@ -102,24 +100,23 @@ abstract public class Usuario
     
     /**
      * Método recolhe informações de cadastramento de usuário pelo console.
-     * @param INPUT
      */    
-    public void preencherCampos(Scanner INPUT)
+    public void preencherCampos()
     {
         System.out.print("Informe nome: ");
-        setNome(INPUT.nextLine());
+        setNome(Console.getLine());
         
         System.out.print("Informe telefone: ");
-        setTelefone(INPUT.nextLine()); 
+        setTelefone(Console.getLine()); 
         
         System.out.print("Informe email: ");
-        setEmail(INPUT.nextLine());
+        setEmail(Console.getLine());
         
         System.out.print("Informe endereco: ");
-        setEndereco(INPUT.nextLine());
+        setEndereco(Console.getLine());
         
         System.out.print("Informe regiao: ");
-        setRegiao(INPUT.nextLine());   
+        setRegiao(Console.getLine());   
     }
     
     /**

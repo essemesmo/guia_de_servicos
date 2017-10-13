@@ -25,11 +25,12 @@ public class Cadastro_Prestadores extends Banco
      /** 
      * Método busca na coleção os objetos Prestador que correspondem
      * aos campos inseridos no console. 
-     * @param campo
-     * @param txt 
      */
     @Override
-    public void buscar(String campo, String txt) {
+    public void buscar() 
+    {
+        String campo = entrarCampo();
+        String txt = entrarBusca();
         collection.find(eq(campo, txt)).forEach(printBlock);
     }
     
@@ -44,9 +45,31 @@ public class Cadastro_Prestadores extends Banco
       
     /**
      * Método adiciona um objeto Prestador na coleção.
-     * @param prestador 
      */
-    public void adicionar(Prestador prestador) {
+    @Override
+    public void adicionar() 
+    {
+        Prestador prestador = new Prestador();
+        prestador.preencherCampos();
         collection.insertOne(prestador);    
     }
+    
+    /**
+     * Método retorna o campo a ser pesquisado no banco.
+     * @return - String
+     */
+    @Override
+    public String entrarCampo()
+    {        
+        System.out.print
+        ( "Campos de Busca:" + "\n"
+        + "por nome: nome" + "\n"
+        + "por endereco: endereco" + "\n"
+        + "por telefone: telefone" + "\n"
+        + "por especificacao: especificacao" + "\n"
+        + "por descricao: descricao" + "\n"
+        + "Campo: ");
+        
+        return Console.getLine();
+    }    
 }

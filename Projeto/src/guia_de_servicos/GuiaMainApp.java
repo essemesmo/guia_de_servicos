@@ -14,7 +14,7 @@ public class GuiaMainApp
 {
     public static void main(String[] args) 
     {    
-        Cadastro_Prestadores cadastro = new Cadastro_Prestadores();
+        Banco cadastro = new Cadastro_Prestadores();
         Menu menu = new Menu(cadastro);
         
         menu.loop();

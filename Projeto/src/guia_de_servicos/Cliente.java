@@ -1,7 +1,5 @@
 package guia_de_servicos;
 
-import java.util.Scanner;
-
 /**
  * Classe Cliente carrega informações básicas da superclasse somados
  * à caracteristicas próprias.
@@ -35,16 +33,15 @@ public class Cliente extends Usuario
     
     /**
      * Método sobrecarregado da classe Usuario lê entradas de
-     * cadastramento dos prestadores de serviço.
-     * @param INPUT referência ao objeto tipo Scanner do menu. 
+     * cadastramento dos prestadores de serviço. 
      */
     @Override
-    public void preencherCampos(Scanner INPUT) 
+    public void preencherCampos() 
     {    
-        super.preencherCampos(INPUT);
+        super.preencherCampos();
         
         System.out.print("Informe cpf: ");
-        setCpf(INPUT.nextLine());
+        setCpf(Console.getLine());
     }
     
     /**
