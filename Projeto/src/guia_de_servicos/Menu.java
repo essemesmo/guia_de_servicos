@@ -1,7 +1,7 @@
 package guia_de_servicos;
 
 /**
- * Classe Menu carrega o laço principal de cadastramento de Prestadores.
+ * Classe Menu carrega o laço principal de cadastramento de Usuários.
  */
 public class Menu 
 {    
