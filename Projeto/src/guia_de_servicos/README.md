@@ -11,12 +11,6 @@ Herença:
     
     Cadastro_Prestadores e Cadastro_Clientes são subclasses de Banco.
 
-Sobrecarga de Métodos: 
-
-    Subclasses Prestador e Cliente sobrecarregam métodos da superclasse Usuario,
-
-    Subclasses Cadastro_Clientes e Cadastro_Prestadores sobrecarregam métodos da superclasse Banco.
-
 Polimorfismo:
   
     Uma referênciada da superclasse abstrata Banco pode ser utilizada para invocar polimorficamente
