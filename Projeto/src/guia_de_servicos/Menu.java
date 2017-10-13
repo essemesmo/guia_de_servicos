@@ -71,10 +71,8 @@ public class Menu
         + "3: Imprimir Lista" + "\n"
         + "0: Sair" + "\n"
         + "Opcao: " );    
-        
-        char op = Console.getChar();
-        
-        return op;
+                
+        return Console.getChar();
     }       
     
     /**
