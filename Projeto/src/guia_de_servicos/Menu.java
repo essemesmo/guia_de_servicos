@@ -7,7 +7,7 @@ public class Menu
 {    
     /**
      * Construtor inicializa atributos padrão do objeto tipo Menu.
-     * @param cadastro referência à um objeto do tipo ArrayList.
+     * @param cadastro referência à um objeto do tipo Banco.
      */
     public Menu(Banco cadastro) 
     {
