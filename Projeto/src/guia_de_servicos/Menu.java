@@ -3,7 +3,7 @@ package guia_de_servicos;
 import java.util.Scanner;
 
 /**
- * Classe Menu carrega o laço principal de cadastramento.
+ * Classe Menu carrega o laço principal de cadastramento de Prestadores.
  */
 public class Menu 
 {    
@@ -34,12 +34,15 @@ public class Menu
                 
                 case '2' : case_2(); break;
                 
-                case '4' : case_4(); break;
+                case '3' : case_3(); break;
             }
             
         } while(getOpcao() != '0');
     }
     
+    /**
+     * Método executado quando a opção 1 é escolhida.
+     */
     private void case_1()
     {
         Prestador prestador = new Prestador();
@@ -47,11 +50,17 @@ public class Menu
         this.cadastro.adicionar(prestador);
     }
 
+    /**
+     * Método executado quando a opção 2 é escolhida.
+     */
     private void case_2() {
         this.cadastro.buscar( entrarCampo(), entrarBusca() );   
     }
     
-    private void case_4() {
+    /**
+     * Método executado quando a opção 4 é escolhida.
+     */
+    private void case_3() {
         this.cadastro.imprimirTodos();   
     }
     
@@ -61,26 +70,34 @@ public class Menu
      */
     private char entrarOpcao() 
     {    
-        System.out.println
+        System.out.print
         ( "Informe uma das opcoes: " + "\n"
         + "1: Cadastrar" + "\n"
         + "2: Procurar" + "\n"
-        + "3: Remover" + "\n"
-        + "4: Imprimir Lista" + "\n"
-        + "0: Sair" );    
+        + "3: Imprimir Lista" + "\n"
+        + "0: Sair" + "\n"
+        + "Opcao: " );    
         
-        char temp = INPUT.next().charAt(0);
+        char op = INPUT.next().charAt(0);
         INPUT.nextLine();
         
-        return temp;
+        return op;
     }   
     
+    /**
+     * Método retorna a String que deve ser reconhecida no banco.
+     * @return - String
+     */
     private String entrarBusca() 
     {
         System.out.print("Buscar por: ");
         return INPUT.nextLine();
     }
     
+    /**
+     * Método retorna o campo a ser pesquisado no banco.
+     * @return - String
+     */
     private String entrarCampo()
     {        
         System.out.print
@@ -90,7 +107,7 @@ public class Menu
         + "por telefone: telefone" + "\n"
         + "por especificacao: especificacao" + "\n"
         + "por descricao: descricao" + "\n"
-        + "buscar por: ");
+        + "Campo: ");
         
         return INPUT.nextLine();
     }    

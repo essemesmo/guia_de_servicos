@@ -3,17 +3,22 @@ package guia_de_servicos;
 import java.util.Scanner;
 
 /**
- *
- * 
+ * Classe Cliente carrega informações básicas da superclasse somados
+ * à caracteristicas próprias.
  */
-public class Cliente extends Pessoa
+public class Cliente extends Usuario
 {
+    /*
+    * Construtor incializa os atributos do objeto Cliente
+    * com valores padrão.
+    */
     public Cliente()
     {
         cpf = "<nao informado>";
     }
     
     /**
+     * Método get do atributo cpf.
      * @return the cpf
      */
     public String getCpf() {
@@ -21,6 +26,7 @@ public class Cliente extends Pessoa
     }
 
     /**
+     * Método set do atributo cpf.
      * @param cpf the cpf to set
      */
     public void setCpf(String cpf) {
@@ -28,45 +34,30 @@ public class Cliente extends Pessoa
     }
     
     /**
-     * Método lê entradas de cadastramento dos prestadores de serviço.
+     * Método sobrecarregado da classe Usuario lê entradas de
+     * cadastramento dos prestadores de serviço.
      * @param INPUT referência ao objeto tipo Scanner do menu. 
      */
     @Override
     public void preencherCampos(Scanner INPUT) 
     {    
-        System.out.print("Informe nome: ");
-        setNome(INPUT.nextLine());
-        
-        System.out.print("Informe telefone: ");
-        setTelefone(INPUT.nextLine()); 
-        
-        System.out.print("Informe email: ");
-        setEmail(INPUT.nextLine());
+        super.preencherCampos(INPUT);
         
         System.out.print("Informe cpf: ");
         setCpf(INPUT.nextLine());
-        
-        System.out.print("Informe endereco: ");
-        setEndereco(INPUT.nextLine());
-        
-        System.out.print("Informe regiao: ");
-        setRegiao(INPUT.nextLine());       
-        
     }
     
     /**
-     *Método override da classe abstrata Pessoa
+     * Método sobrecarregado da classe Usuario, apresenta
+     * no console as informações do Cliente.
      */
     @Override 
     public void informacao() 
     {    
+        super.informacao();
+        
         System.out.println
-        ( "Nome: " + getNome() + "\n"
-        + "Telefone: " + getTelefone() + "\n"        
-        + "Email: " + getEmail() + "\n"
-        + "CNPJ: " + getCpf() + "\n"
-        + "Endereço: " + getEndereco() + "\n"
-        + "Regiao: " + getRegiao() + "\n" );
+        ( "CNPJ: " + getCpf() + "\n" );
     }
  
     private String cpf;

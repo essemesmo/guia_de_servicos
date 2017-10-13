@@ -10,7 +10,6 @@ package guia_de_servicos;
 /**
  * Classe GuiaMainApp apresenta a função main.
  */
-
 public class GuiaMainApp 
 {
     public static void main(String[] args) 
