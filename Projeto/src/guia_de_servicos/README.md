@@ -10,12 +10,13 @@ Herença:
     Prestador e Cliente são subclasses de Usuario,
     
     Cadastro_Prestadores e Cadastro_Clientes são subclasses de Banco.
+    
+Interface:
+
+    Interface Colecao determina as assinaturas importantes para a manipulção de dados de diversas
+    coleções de objetos gravadas no banco.
 
 Polimorfismo:
   
-    Uma referênciada da superclasse abstrata Banco pode ser utilizada para invocar polimorficamente
+    Uma referênciada a Interface Colecao pode ser utilizada para invocar polimorficamente
     funcionalidades de objetos concretos das subclasses Cadastro_Prestadores e Cadastro_Clientes.
-
-Classes abstratas:
-
-    Classe abstrata Banco possui métodos abstratos, não deve ser instânciada.
