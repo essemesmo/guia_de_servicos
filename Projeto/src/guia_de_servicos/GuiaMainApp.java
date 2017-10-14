@@ -16,7 +16,7 @@ public class GuiaMainApp
     {            
         Banco banco = new Banco();
         
-        new Menu().lacoExterno();
+        new Menu_Console().loop();
         
         banco.closeConnection();
     }
