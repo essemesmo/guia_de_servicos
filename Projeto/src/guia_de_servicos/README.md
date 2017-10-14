@@ -9,6 +9,10 @@ Herença:
 
     Prestador e Cliente são subclasses de Usuario.
     
+Classe Abstrata:
+
+    Classes Menu_Console e SubMenu_Console herdam da classe abstrara Menu, implementando os métodos abstratos.
+    
 Interface:
 
     Cadastro_Prestadores e Cadastro_Clientes implementam Interface Colecao.
