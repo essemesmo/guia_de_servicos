@@ -11,7 +11,7 @@ Herença:
     
 Classe Abstrata:
 
-    Classes Menu_Console e SubMenu_Console herdam da classe abstrara Menu, implementando os métodos abstratos.
+    Classes Menu_Console e SubMenu_Console herdam da classe abstrata Menu, implementando os métodos abstratos.
     
 Interface:
 
