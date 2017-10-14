@@ -17,5 +17,5 @@ Interface:
 
 Polimorfismo:
   
-    Uma referênciada a Interface Colecao pode ser utilizada para invocar polimorficamente
+    Uma referênciada da Interface Colecao pode ser utilizada para invocar polimorficamente
     funcionalidades de objetos concretos das classes Cadastro_Prestadores e Cadastro_Clientes.
