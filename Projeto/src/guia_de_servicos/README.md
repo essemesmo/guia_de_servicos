@@ -2,8 +2,8 @@ Arquivos .java do Projeto.
 
 Construtores: 
 
-    classe Usuario, classe Prestador, classe Cliente, classe Banco, 
-    classe Cadastro_Prestadores, classe Cadastro_Clientes.
+    classe Usuario, classe Prestador, classe Cliente, 
+    classe Banco, classe Cadastro_Prestadores, classe Cadastro_Clientes.
 
 Herença:
 
@@ -11,7 +11,7 @@ Herença:
     
 Interface:
 
-    Cadastro_Prestadores e Cadastro_Clientes implementam Interface Colecao
+    Cadastro_Prestadores e Cadastro_Clientes implementam Interface Colecao.
     Interface Colecao determina as assinaturas importantes para a manipulção de dados de diversas
     coleções de objetos gravadas no banco.
 
