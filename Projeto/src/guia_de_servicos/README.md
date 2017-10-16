@@ -5,7 +5,11 @@ Construtores:
     classe Usuario, classe Prestador, classe Cliente, 
     classe Banco, classe Cadastro_Prestadores, classe Cadastro_Clientes.
 
-Herença:
+Sobrecarga de Métodos:
+
+    classe Console.
+
+Herença simples:
 
     Prestador e Cliente são subclasses de Usuario.
     
