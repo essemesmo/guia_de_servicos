@@ -24,18 +24,14 @@ public interface Colecao
     
     /**
      * Assinatura de métodos que retornam campos de busca de pesquisa.
-     * @return - String
+     * @param campo
      */
-    String entrarCampo();
+    void setCampo(String campo);
     
     /**
-     * Método retorna uma string de busca sem nenhuma forma de tratamento
-     * de entrada.
-     * @return - String
+     * 
+     * @return 
      */
-    default String entrarBusca() 
-    {
-        System.out.print("Buscar por: ");
-        return Console.getLine();
-    };
+    String campoDePesquisa();
 }
+

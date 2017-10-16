@@ -62,7 +62,7 @@ public class SubMenu_Console extends Menu
         + "1: Cadastrar" + "\n"
         + "2: Procurar" + "\n"
         + "3: Imprimir Lista" + "\n"
-        + "S: Sair" + "\n"
+        + "0: Sair" + "\n"
         + "Opcao: " );    
     }
     
@@ -72,7 +72,7 @@ public class SubMenu_Console extends Menu
      */
     @Override
     protected char sairChar() {
-        return 'S';
+        return '0';
     }
         
     /**

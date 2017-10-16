@@ -10,6 +10,21 @@ import static com.mongodb.client.model.Filters.*;
  */
 public class Cadastro_Clientes implements Colecao
 {
+
+    /**
+     * @return the campo
+     */
+    public String getCampo() {
+        return campo;
+    }
+
+    /**
+     * @param campo the campo to set
+     */
+    @Override
+    public void setCampo(String campo) {
+        this.campo = campo;
+    }
     /**
      * Construtor define a coleção onde as manipulações de dados serão
      * feitas e o tipo de objeto a ser inserido.
@@ -20,7 +35,7 @@ public class Cadastro_Clientes implements Colecao
     }    
     
     private final Block<Cliente> printBlock = (final Cliente cliente) -> {
-        System.out.println(cliente.toString());   
+        System.out.println(cliente.toString());
     };
     
     /**
@@ -30,9 +45,9 @@ public class Cadastro_Clientes implements Colecao
     @Override
     public void buscar() 
     {
-        String campo = entrarCampo();
-        String txt = entrarBusca();
-        collection.find(eq(campo, txt)).forEach(printBlock);
+        setCampo(Console.getLine(campoDePesquisa()));
+        String txt = Console.getLine("Buscar por: ");
+        collection.find(eq(getCampo(), txt)).forEach(printBlock);
     }
     
     /**
@@ -60,18 +75,17 @@ public class Cadastro_Clientes implements Colecao
      * @return - String
      */
     @Override
-    public String entrarCampo()
+    public String campoDePesquisa()
     {        
-        System.out.print
-        ( "Campos de Busca:" + "\n"
-        + "por nome: nome" + "\n"
-        + "por endereco: endereco" + "\n"
-        + "por regiao: regiao" + "\n"        
-        + "por telefone: telefone" + "\n"
-        + "Campo: ");
-        
-        return Console.getLine();
+        return
+            "Campos de Busca:" + "\n"
+            + "por nome: nome" + "\n"
+            + "por endereco: endereco" + "\n"
+            + "por regiao: regiao" + "\n"        
+            + "por telefone: telefone" + "\n"
+            + "Campo: ";
     }
 
-    private final MongoCollection collection;    
+    private final MongoCollection collection;  
+    private String campo;
 }

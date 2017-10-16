@@ -28,13 +28,13 @@ public class Menu_Console extends Menu
     {
         switch (opcao)
         {
-            case '1': colecao = new Cadastro_Prestadores(); break;
-            case '2': colecao = new Cadastro_Clientes(); break;
-        }
-
-        if (colecao != null) {new SubMenu_Console(colecao).loop();}
-
-        colecao = null;        
+            case '1': 
+                new SubMenu_Console(new Cadastro_Prestadores()).loop();
+                break;
+            case '2':
+                new SubMenu_Console(new Cadastro_Clientes()).loop();
+                break;
+        }       
     }
     
     /**
@@ -44,7 +44,5 @@ public class Menu_Console extends Menu
     @Override
     protected char sairChar() {
         return 'S';
-    }
-    
-    protected Colecao colecao;
+    }    
 }

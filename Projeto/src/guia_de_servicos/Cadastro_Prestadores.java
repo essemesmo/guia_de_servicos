@@ -10,6 +10,22 @@ import static com.mongodb.client.model.Filters.*;
  */
 public class Cadastro_Prestadores implements Colecao
 {
+
+    /**
+     * @return the campo
+     */
+    public String getCampo() {
+        return campo;
+    }
+
+    /**
+     * @param campo the campo to set
+     */
+    @Override
+    public void setCampo(String campo) {
+        this.campo = campo;
+    }
+    
     /**
      * Construtor define a coleção onde as manipulações de dados serão
      * feitas e o tipo de objeto a ser inserido.
@@ -30,9 +46,9 @@ public class Cadastro_Prestadores implements Colecao
     @Override
     public void buscar() 
     {
-        String campo = entrarCampo();
-        String txt = entrarBusca();
-        collection.find(eq(campo, txt)).forEach(printBlock);
+        setCampo(Console.getLine(campoDePesquisa()));
+        String txt = Console.getLine("Buscar por: ");
+        collection.find(eq(getCampo(), txt)).forEach(printBlock);
     }
     
     /**
@@ -56,24 +72,23 @@ public class Cadastro_Prestadores implements Colecao
     }
     
     /**
-     * Método retorna o campo a ser pesquisado no banco.
+     * Método
      * @return - String
      */
     @Override
-    public String entrarCampo()
-    {        
-        System.out.print
-        ( "Campos de Busca:" + "\n"
-        + "por nome: nome" + "\n"
-        + "por endereco: endereco" + "\n"
-        + "por regiao: regiao" + "\n"
-        + "por telefone: telefone" + "\n"
-        + "por especificacao: especificacao" + "\n"
-        + "por descricao: descricao" + "\n"
-        + "Campo: ");
-        
-        return Console.getLine();
+    public String campoDePesquisa()
+    {       
+        return
+            "Campos de Busca:" + "\n"
+            + "por nome: nome" + "\n"
+            + "por endereco: endereco" + "\n"
+            + "por regiao: regiao" + "\n"
+            + "por telefone: telefone" + "\n"
+            + "por especificacao: especificacao" + "\n"
+            + "por descricao: descricao" + "\n"
+            + "Campo: ";
     }  
     
     private final MongoCollection collection;
+    private String campo;
 }

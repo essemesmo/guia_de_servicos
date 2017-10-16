@@ -101,7 +101,7 @@ public class Prestador extends Usuario
     }   
 
     /**
-     * Método sobrecarregado da classe Usuario lê as entradas de
+     * Método sobrepõe ao da classe Usuario, lê as entradas de
      * cadastramento do clientes.
      */    
     @Override
@@ -109,22 +109,18 @@ public class Prestador extends Usuario
     {    
         super.preencherCampos();
         
-        System.out.print("Informe cnpj: ");
-        setCnpj(Console.getLine());       
+        setCnpj(Console.getLine("Informe cnpj: "));       
         
-        System.out.print("Informe especificacao: ");
-        setEspecificacao(Console.getLine());
+        setEspecificacao(Console.getLine("Informe especificacao: "));
 
-        System.out.print("Informe descricao: ");
-        setDescricao(Console.getLine());
+        setDescricao(Console.getLine("Informe descricao: "));
  
-        System.out.print("Informe custo: ");
-        setCusto(Console.getDouble());
+        setCusto(Console.getDouble("Informe custo: "));
     } 
     
     /**
-     * Método sobrecarregado da classe Usuario, apresenta
-     * no console as informações dos Prestadores de serviço.
+     * Método sobrepõe ao da classe Usuario, retorna
+     * as informações dos Prestadores de serviço.
      * @return String - informações da classe Prestador.
      */
     @Override

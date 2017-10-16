@@ -109,21 +109,16 @@ public class Usuario
      */    
     public void preencherCampos()
     {
-        System.out.print("Informe nome: ");
-        setNome(Console.getLine());
+        setNome(Console.getLine("Informe nome: "));
         
-        System.out.print("Informe telefone: ");
-        setTelefone(Console.getLine()); 
+        setTelefone(Console.getLine("Informe telefone: ")); 
         
-        System.out.print("Informe email: ");
-        setEmail(Console.getLine());
+        setEmail(Console.getLine("Informe email: "));
         
-        System.out.print("Informe endereco: ");
-        setEndereco(Console.getLine());
+        setEndereco(Console.getLine("Informe endereco: "));
         
-        System.out.print("Informe regiao: ");
-        setRegiao(Console.getLine());   
-    }
+        setRegiao(Console.getLine("Informe regiao: "));   
+    }    
     
     /**
      * Construtor inicializa os atributos do objeto Usuario com valores 

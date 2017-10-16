@@ -32,7 +32,7 @@ public class Cliente extends Usuario
     }
     
     /**
-     * Método sobrecarregado da classe Usuario lê entradas de
+     * Método sobrepõe ao da classe Usuario, lê entradas de
      * cadastramento dos prestadores de serviço. 
      */
     @Override
@@ -40,13 +40,12 @@ public class Cliente extends Usuario
     {    
         super.preencherCampos();
         
-        System.out.print("Informe cpf: ");
-        setCpf(Console.getLine());
+        setCpf(Console.getLine("Informe cpf: "));
     }
     
     /**
-     * Método sobrecarregado da classe Usuario, apresenta
-     * no console as informações dos Clientes.
+     * Método sobrepõe ao da classe Usuario, retorna
+     * as informações dos Clientes.
      * @return String - informações da classe Cliente.
      */
     @Override 
