@@ -8,11 +8,15 @@ Construtores:
 Sobrecarga de Métodos:
 
     Métodos da class Console.
+    
+Sobrecarga de Operador:
+
+    Scripts em C++ estão na pasta LAB.
 
 Herença simples:
 
     Prestador e Cliente são subclasses de Usuario.
-    
+
 Container:
 
     ArrayList é utilizada na classe Colecao para carregar objetos na memória virtual para operações.
