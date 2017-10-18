@@ -3,27 +3,34 @@ Arquivos .java do Projeto.
 Construtores: 
 
     classe Usuario, classe Prestador, classe Cliente, 
-    classe Banco, classe Cadastro_Prestadores, classe Cadastro_Clientes.
+    classe Banco, classe Colecao, classe MenuOperadorColecao.
 
 Sobrecarga de Métodos:
 
-    classe Console.
+    Métodos da class Console.
 
 Herença simples:
 
     Prestador e Cliente são subclasses de Usuario.
     
+Container:
+
+    ArrayList é utilizada na classe Colecao para carregar objetos na memória virtual para operações.
+    
 Classe Abstrata:
 
-    Classes Menu_Console e SubMenu_Console herdam da classe abstrata Menu, implementando os métodos abstratos.
+    Classes Login e MenuOperadorColecao herdam da classe abstrata Menu, implementando os métodos abstratos.
     
 Interface:
 
-    Cadastro_Prestadores e Cadastro_Clientes implementam Interface Colecao.
-    Interface Colecao determina as assinaturas importantes para a manipulção de dados de diversas
-    coleções de objetos gravadas no banco.
+    nah.
+    
+Genéricos:
+
+    Classe Colecao apresenta parâmetro de tipo para criar ArrayLists e coleções no MongoDB em tempo de execução.
 
 Polimorfismo:
-  
-    Uma referênciada da Interface Colecao pode ser utilizada para invocar polimorficamente
-    funcionalidades de objetos concretos das classes Cadastro_Prestadores e Cadastro_Clientes.
+
+    Referência da classe Object pode ser utilizado para indicar objetos Prestador e Cliente, que são subclasses.
+    Essa referência então apresenta o comportamento "toString()" sobrescrito da classe concreta referenciada.
+    Uso é feito na classe Colecao.
