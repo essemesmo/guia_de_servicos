@@ -31,7 +31,8 @@ Interface:
     
 Genéricos:
 
-    Classe Colecao apresenta parâmetro de Tipo, assim generalizando a criação de ArrayList, coleções do MongoDB, em tempo de execução.
+    Classe Colecao apresenta parâmetro de Tipo, assim generalizando a criação de ArrayList, coleções do MongoDB, 
+    em tempo de execução do programa.
 
 Polimorfismo:
 
