@@ -41,5 +41,6 @@ Polimorfismo:
     
     Referência da classe Usuario pode ser utilizadad para indicar objetos Presetador e Cliente, que são sublcasses.
     Essa refêrencia então apresenta o comportamento "preencherCampos()" sobrescrito pela classe concreta referenciada.
+    Uso é feito na classe MenuOperadorColecao.
    
     
