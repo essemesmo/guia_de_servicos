@@ -14,9 +14,9 @@ public class GuiaMainApp
 {
     public static void main(String[] args) 
     {            
-        Banco banco = new Banco();
-        
-        new Menu_Console().loop();
+        Banco banco = new Banco("guia-de-servicos");
+                
+        new Login().loop();
         
         banco.closeConnection();
     }

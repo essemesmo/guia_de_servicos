@@ -22,23 +22,38 @@ public class Banco
      * Contrutor inicializa a conexão com o banco MongoDB local, indica
      * o database a ser utilizado e habilitando o reconhecimento de classes
      * para serem transformadas em Documents na coleção.
+     * @param databaseName
      */
-    public Banco() 
+    public Banco(String databaseName) 
     {
         mongoClient = new MongoClient( "localhost" , 27017 );
         
         pojoCodecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
             fromProviders(PojoCodecProvider.builder().automatic(true).build())); 
         
-        database = mongoClient.getDatabase("guia-de-servicos").withCodecRegistry(pojoCodecRegistry);     
+        database = mongoClient.getDatabase(databaseName).withCodecRegistry(pojoCodecRegistry);     
     }
     
     /**
      * Método encerra conexão com o banco MongoDB.
      */
-    public void closeConnection() {
-        mongoClient.close();
-    };   
+    public final void closeConnection() {
+        getMongoClient().close();
+    }; 
+    
+   /**
+     * @return the mongoClient
+     */
+    public static MongoClient getMongoClient() {
+        return mongoClient;
+    }
+
+    /**
+     * @param aMongoClient the mongoClient to set
+     */
+    public static void setMongoClient(MongoClient aMongoClient) {
+        mongoClient = aMongoClient;
+    }    
     
     private static MongoClient mongoClient;
     public static MongoDatabase database;
