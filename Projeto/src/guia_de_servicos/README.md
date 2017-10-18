@@ -27,14 +27,19 @@ Classe Abstrata:
     
 Interface:
 
-    nah.
+    Ainda nenhum motivo interessante para ser usado no projeto.
     
 Genéricos:
 
-    Classe Colecao apresenta parâmetro de tipo para criar ArrayLists e coleções no MongoDB em tempo de execução.
+    Classe Colecao apresenta parâmetro de Tipo, assim generalizando a criação de ArrayList, coleções do MongoDB, em tempo de execução.
 
 Polimorfismo:
 
-    Referência da classe Object pode ser utilizado para indicar objetos Prestador e Cliente, que são subclasses.
-    Essa referência então apresenta o comportamento "toString()" sobrescrito da classe concreta referenciada.
+    Referência da classe Object pode ser utilizada para indicar objetos Prestador e Cliente, que são subclasses.
+    Essa referência então apresenta o comportamento "toString()" sobrescrito pela classe concreta referenciada.
     Uso é feito na classe Colecao.
+    
+    Referência da classe Usuario pode ser utilizadad para indicar objetos Presetador e Cliente, que são sublcasses.
+    Essa refêrencia então apresenta o comportamento "preencherCampos()" sobrescrito pela classe concreta referenciada.
+   
+    
