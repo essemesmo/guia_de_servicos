@@ -2,7 +2,8 @@
 Projeto de Orientação a Objetos
 
 Guia de Serviços é um projeto desenvolvido em Java.
-Realizado pelos alunos da Instituição de Ensino FEI:
+
+Realizado pelos alunos da FEI:
 
    * Thyago M. do Santos - 222160202,
    * Rafael da Silva - 222160194,
