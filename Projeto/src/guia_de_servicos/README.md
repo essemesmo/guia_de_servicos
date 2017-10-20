@@ -8,10 +8,6 @@ Construtores:
 Sobrecarga de Métodos:
 
     Métodos da class Console.
-    
-Sobrecarga de Operador:
-
-    Scripts em C++ estão na pasta LAB.
 
 Herença simples:
 
