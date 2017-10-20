@@ -9,47 +9,55 @@ import java.util.ArrayList;
 
 /**
  * Classe representa o cadastro de Usuarios no banco, abrigando as
- manipulações de coleções.
+ * manipulações de coleções.
  * @param <T>
  */
 public class Colecao<T>
 {
 
     /**
-     * @return the classType
+     * Método get do atributo classType.
+     * @return the classType.
      */
     public final Class getClassType() {
         return classType;
     }
 
     /**
-     * @param classType the classType to set
+     * Método set do atributo classType.
+     * @param classType the classType to set.
      */
     public final void setClassType(Class classType) {
         this.classType = classType;
     }
+    
     /**
-     * @return the busca
+     * Método get do atributo busca.
+     * @return the busca.
      */
     public final String getBusca() {
         return busca;
     }
 
     /**
-     * @param busca the busca to set
+     * Método set do atributo busca.
+     * @param busca the busca to set.
      */
     public final void setBusca(String busca) {
         this.busca = busca;
     }
+    
     /**
-     * @return the campo
+     * Método get do atributo campo.
+     * @return the campo.
      */
     public final String getCampo() {
         return campo;
     }
 
     /**
-     * @param campo the campo to set
+     * Método set do atributo campo.
+     * @param campo the campo to set.
      */
     public void setCampo(String campo) {
         this.campo = campo;
@@ -58,8 +66,8 @@ public class Colecao<T>
     /**
      * Construtor define a coleção onde as manipulações de dados serão
      * feitas e o tipo de objeto a ser inserido.
-     * @param collectionName
-     * @param classType
+     * @param collectionName Nome da Coleção no MongoDB.
+     * @param classType Objeto do tipo Class que define a estrutura do documento.
      */
     public Colecao(String collectionName, Class classType) 
     {
@@ -68,23 +76,26 @@ public class Colecao<T>
         collection = Banco.database.getCollection(collectionName, getClassType());   
     }    
     
-    /**
-     * 
-     */
     @SuppressWarnings("Convert2Lambda")
     private final Block<Object> printBlock = new Block<Object>() 
     {
+        /**
+         * Método sobrescrito imprime informações de objetos do banco
+         * no prompt.
+         * @param obj Objeto a ser operado.
+         */
         @Override
         public void apply(final Object obj) {
             System.out.println(obj.toString());
         }
     };  
-    
-    /**
-     * 
-     */
+
     private final Block<T> pushCollection = new Block<T>() 
     {
+        /**
+         * Método adiciona objetos à uma ArrayList.
+         * @param obj Objeto a ser operado.
+         */
         @Override
         public void apply(final T obj) {
             listaOperavel.add(obj);
@@ -93,7 +104,7 @@ public class Colecao<T>
     
     /**
      * Método busca na coleção os objetos que correspondem
-     * aos campos inseridos na pesquisa. 
+     * aos campos inseridos na pesquisa e imprime-os no console.
      */
     public void buscar() 
     {
@@ -112,7 +123,7 @@ public class Colecao<T>
 
      /**
      * Método adiciona um objeto na coleção.
-     * @param obj
+     * @param obj Objeto a ser operado.
      */
     public void adicionar(T obj) 
     {
@@ -121,8 +132,8 @@ public class Colecao<T>
     }
     
     /**
-     * Método retorna o campo a ser pesquisado no banco.
-     * @return - String
+     * Método apresenta os campos de pesquisa da coleção.
+     * @return String Texto com os campos de pesquisa.
      */
     public String camposDePesquisa()
     {        

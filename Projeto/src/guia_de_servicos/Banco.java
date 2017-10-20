@@ -22,7 +22,7 @@ public class Banco
      * Contrutor inicializa a conexão com o banco MongoDB local, indica
      * o database a ser utilizado e habilitando o reconhecimento de classes
      * para serem transformadas em Documents na coleção.
-     * @param databaseName
+     * @param databaseName Nome do database no MongoDB.
      */
     public Banco(String databaseName) 
     {
@@ -42,6 +42,7 @@ public class Banco
     }; 
     
    /**
+    * Método get do atributo mongoClient.
      * @return the mongoClient
      */
     public static MongoClient getMongoClient() {
@@ -49,6 +50,7 @@ public class Banco
     }
 
     /**
+     * Método set do atributo mongoClient
      * @param aMongoClient the mongoClient to set
      */
     public static void setMongoClient(MongoClient aMongoClient) {

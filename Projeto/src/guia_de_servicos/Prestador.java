@@ -102,7 +102,7 @@ public class Prestador extends Usuario
 
     /**
      * Método sobrepõe ao da classe Usuario, lê as entradas de
-     * cadastramento do clientes.
+     * cadastramento dos prestadores.
      */    
     @Override
     public void preencherCampos() 

@@ -1,8 +1,8 @@
 package guia_de_servicos;
 
 /**
- * Classe Cliente carrega informações básicas da superclasse somados
- * à caracteristicas próprias.
+ * Classe Cliente carrega informações básicas da superclasse
+ * Usuario somados à caracteristicas próprias.
  */
 public class Cliente extends Usuario
 {
@@ -33,7 +33,7 @@ public class Cliente extends Usuario
     
     /**
      * Método sobrepõe ao da classe Usuario, lê entradas de
-     * cadastramento dos prestadores de serviço. 
+     * cadastramento dos clientes.
      */
     @Override
     public void preencherCampos() 

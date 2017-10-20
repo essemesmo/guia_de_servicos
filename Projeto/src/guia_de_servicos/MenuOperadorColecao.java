@@ -6,7 +6,8 @@ package guia_de_servicos;
 public class MenuOperadorColecao extends Menu
 {    
     /**
-     * 
+     * Construtor tem como parâmetro uma refêrencia de objeto da classe
+     * Coleção.
      * @param colecao 
      */
     public MenuOperadorColecao(Colecao colecao) {
@@ -31,6 +32,8 @@ public class MenuOperadorColecao extends Menu
     
     /**
      * Método executado quando a opção 1 é escolhida.
+     * Comportamento polimorfico apartir de uma refêrencia a Usuario,
+     * métodos são determinidos pelos objetos concretos.
      */
     private void case_1() 
     {
@@ -55,14 +58,14 @@ public class MenuOperadorColecao extends Menu
     }
     
     /**
-     * Método executado quando a opção 4 é escolhida.
+     * Método executado quando a opção 3 é escolhida.
      */
     private void case_3() {
         colecao.imprimirTodos();
     }
     
     /**
-     * 
+     * Imprimi texto para o usuário.
      */
     @Override
     protected void imprimirOpcoes() 
@@ -77,8 +80,8 @@ public class MenuOperadorColecao extends Menu
     }
     
     /**
-     * 
-     * @return 
+     * Método utilizado para determinar o char de saída do laço.
+     * @return char Carácter de saída do laço.
      */
     @Override
     protected char sairChar() {

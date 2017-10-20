@@ -17,9 +17,10 @@ public class Console
     }
     
     /**
-     * 
-     * @param txt
-     * @return 
+     * Método estático retorna String de entrada no prompt de comando.
+     * Parâmetro da função é uma String que será exibida no console.
+     * @param txt Texto exibido no console.
+     * @return String Texto inserido no prompt.
      */
     public static String getLine(String txt)
     {
@@ -29,7 +30,7 @@ public class Console
     
     /**
      * Método estático retorna Double de entrada no prompt de comando.
-     * @return Double
+     * @return Double Número inseridono prompt.
      */    
     public static double getDouble() {
         return new Scanner(System.in).nextDouble();
@@ -37,8 +38,9 @@ public class Console
     
     /**
      * Método estático retorna Double de entrada no prompt de comando.
-     * @param txt
-     * @return Double
+     * Parâmetro da função é uma String que será exibida no console.
+     * @param txt Texto exibido no console.
+     * @return Double Número inserido no prompt.
      */    
     public static double getDouble(String txt)
     {
@@ -48,7 +50,7 @@ public class Console
     
     /**
      * Método estático retorna Char de entrada no prompt de comando.
-     * @return Char
+     * @return Char Carácter inserido no prompt.
      */    
     public static char getChar()
     {
@@ -58,8 +60,8 @@ public class Console
     
     /**
      * Método estático retorna Char de entrada no prompt de comando.
-     * @param txt
-     * @return Char
+     * @param txt Texto exibido no console.
+     * @return Char Carácter inserido no prompt.
      */    
     public static char getChar(String txt)
     {

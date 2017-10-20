@@ -1,12 +1,12 @@
 package guia_de_servicos;
 
 /**
- *
+ * Menu de escolha de coleção.
  */
 public class Login extends Menu
 {
     /**
-     * 
+     * Método sobrescrito imprime informações no prompt.
      */
     @Override
     protected void imprimirOpcoes()
@@ -20,8 +20,9 @@ public class Login extends Menu
     }
     
     /**
-     * 
-     * @param opcao 
+     * Método principal a ser executado no laço, indicando a escolha
+     * de coleção a ser operada.
+     * @param opcao Carácter que indica a opção selecionada.
      */
     @Override
     protected void funcaoPrincipal(char opcao)
@@ -35,7 +36,7 @@ public class Login extends Menu
     }
     
     /**
-     * 
+     * Métedo executado com a escolha de opção 1.
      */
     private void case_1()
     {
@@ -44,7 +45,7 @@ public class Login extends Menu
     }
     
     /**
-     * 
+     * Método executado com a escolha de opção 2.
      */
     private void case_2()
     {
@@ -53,8 +54,8 @@ public class Login extends Menu
     }
     
     /**
-     * 
-     * @return 
+     * Método retorna o carácter de saída do laço.
+     * @return char Carácter de saída do laço.
      */
     @Override
     protected char sairChar() {
