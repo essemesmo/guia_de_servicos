@@ -1,1 +1,1 @@
-Exercícios de Laboratório, conteúdo não contemplado no Projeto
+Exercícios de Laboratório, conteúdo não contemplado no Projeto.
