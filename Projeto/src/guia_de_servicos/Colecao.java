@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  * Classe representa o cadastro de Usuarios no banco, abrigando as
  * manipulações de coleções.
- * @param <T>
+ * @param <T> Tipo Genérico que será definido em tempo de execução.
  */
 public class Colecao<T>
 {

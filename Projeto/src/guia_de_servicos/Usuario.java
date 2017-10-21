@@ -5,6 +5,22 @@ package guia_de_servicos;
 */
 public class Usuario 
 {
+
+    /**
+     * Método get do atributo saldo.
+     * @return the saldo.
+     */
+    public double getSaldo() {
+        return saldo;
+    }
+
+    /**
+     * Método set do atributo saldo.
+     * @param saldo the saldo to set.
+     */
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
     /**
      * Método get do atributo regiao.
      * @return String - valor do atributo regiao.
@@ -132,6 +148,7 @@ public class Usuario
         this.email = txt;
         this.endereco = txt; 
         this.regiao = txt;
+        this.saldo = 1000.00;
     }
     
     private String nome;
@@ -139,4 +156,5 @@ public class Usuario
     private String telefone;
     private String endereco;
     private String regiao;
+    private double saldo;
 }

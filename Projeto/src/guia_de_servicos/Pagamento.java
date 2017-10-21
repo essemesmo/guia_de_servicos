@@ -1,0 +1,62 @@
+package guia_de_servicos;
+
+/**
+ * Classe opera a transferência monetária entre Cliente e
+ * Prestador.
+ */
+public class Pagamento implements Transferencia
+{
+
+    /**
+     * Método get do atributo numHoras.
+     * @return the numHoras.
+     */
+    public double getNumHoras() {
+        return numHoras;
+    }
+
+    /**
+     * Método set do atributo numHoras.
+     * @param numHoras the numHoras to set.
+     */
+    public void setNumHoras(double numHoras) {
+        this.numHoras = numHoras;
+    }
+    
+    /**
+     * Construtor com entrada de horas prestadas para calcular
+     * custo a ser pago pelo serviço.
+     * @param numHoras 
+     */
+    public Pagamento(int numHoras) {
+        this.numHoras = numHoras;
+    }
+    
+    /**
+     * Construtor sem entrada de horas prestadas para calcular
+     * custo a ser pago pelo serviço.
+     */
+    public Pagamento() {
+        this.numHoras = 1;
+    }    
+    
+    /**
+     * Método transfere credito.
+     * @param cliente Cliente que deve pagar.
+     * @param prestador Prestador que deve receber.
+     */
+    @Override
+    public void transferir(Usuario cliente, Prestador prestador) 
+    {
+        double custo = prestador.getCusto() * getNumHoras();
+        
+        if (cliente.getSaldo() < custo) {
+            System.out.print("Custo superior ao saldo");
+        }
+       
+        cliente.setSaldo(cliente.getSaldo() - custo);
+        prestador.setSaldo(prestador.getSaldo() + custo);
+    }
+    
+    private double numHoras;
+}

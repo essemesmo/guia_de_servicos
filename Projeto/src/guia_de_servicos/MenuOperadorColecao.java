@@ -8,14 +8,16 @@ public class MenuOperadorColecao extends Menu
     /**
      * Construtor tem como parâmetro uma refêrencia de objeto da classe
      * Coleção.
-     * @param colecao 
+     * @param colecao Coleção do MongoDB correspondente.
      */
     public MenuOperadorColecao(Colecao colecao) {
         this.colecao = colecao;
     }
     
     /**
-     * 
+     * Método sobrescrito da classe abstrata Menu, recebe uma opção
+     * para então executar o método privado correnspondente.
+     * @param opcao Carácter a ser manipulado no switch.
      */
     @Override
     protected void funcaoPrincipal(char opcao)
