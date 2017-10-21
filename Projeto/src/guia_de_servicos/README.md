@@ -23,7 +23,7 @@ Classe Abstrata:
     
 Interface:
 
-    Ainda nenhum motivo interessante para ser usado no projeto.
+    Classe Pagamento implementa a interface Transferencia.
     
 Genéricos:
 
