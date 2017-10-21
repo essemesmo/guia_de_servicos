@@ -12,7 +12,7 @@ Melhor FORMATO de diretórios:
 
                     /lib/ (arquivos .jar aqui)
                 
-                    /build/classes/guia_de_servicos/ (arquvios .class aqui)
+                    /build/classes/guia_de_servicos/ (arquivos .class aqui)
                 
                     /src/guia_de_servicos/ (arquivos .java aqui)
                
