@@ -5,10 +5,9 @@ Download e Instalação do MongoDB:
 1- Acesse e baixe a edição MongoDB Community Server para o seu sistema operacional em: https://www.mongodb.com/download-center#community.
 
 2- Ao termino do download, siga o processo de instalação desejavel em: https://docs.mongodb.com/tutorials/. 
-
-RECOMENDÁVEL para Windows: leia e siga SOMENTE com atenção as instruções NESSA ORDEM: 
-
-Get MongoDB Community Edition; Install MongoDB Community Edition - Interactive Installation; Configure a Windows Service for MongoDB Community Edition;
+  RECOMENDÁVEL para Windows: leia e siga SOMENTE com atenção as instruções NESSA ORDEM: 
+  Get MongoDB Community Edition; Install MongoDB Community Edition - Interactive Installation; 
+  Configure a Windows Service for MongoDB Community Edition;
 
 Iniciar o serviço MongoDB:
 
