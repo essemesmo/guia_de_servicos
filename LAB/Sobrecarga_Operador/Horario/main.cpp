@@ -18,3 +18,15 @@ int main(int argc, char** argv)
 	system("pause");
 	return 0;
 }
+
+/*
+
+C++ Prime Plus(5th Edition)
+Chapter 11 Working with classes - Programming Exercises
+Page 582
+Exercise 4
+
+Rewrite the final Time class example (Listings 11.10, 11.11, and 11.12) so that all the
+overloaded operators are implemented using friend functions.
+
+*/
