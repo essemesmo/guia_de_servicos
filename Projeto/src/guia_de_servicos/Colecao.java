@@ -76,19 +76,13 @@ public class Colecao<T>
         collection = Banco.database.getCollection(collectionName, getClassType());   
     }    
     
-    @SuppressWarnings("Convert2Lambda")
-    private final Block<Object> printBlock = new Block<Object>() 
-    {
-        /**
-         * Método sobrescrito imprime informações de objetos do banco
-         * no prompt.
-         * @param obj Objeto a ser operado.
-         */
-        @Override
-        public void apply(final Object obj) {
-            System.out.println(obj.toString());
-        }
-    };  
+    private final Block<Object> printBlock = (final Object obj) -> {
+        System.out.println(obj.toString());
+    } /**
+     * Método sobrescrito imprime informações de objetos do banco
+     * no prompt.
+     * @param obj Objeto a ser operado.
+     */ ;  
 
     private final Block<T> pushCollection = new Block<T>() 
     {
