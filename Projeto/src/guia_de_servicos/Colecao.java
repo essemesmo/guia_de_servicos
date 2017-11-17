@@ -104,15 +104,27 @@ public class Colecao<T>
     {
         setCampo(Console.getLine(camposDePesquisa()));
         setBusca(Console.getLine("Buscar por: "));
-        collection.find(eq(getCampo(), getBusca())).forEach(printBlock);
+        
+        try {
+            collection.find(eq(getCampo(), getBusca())).forEach(printBlock);
+        }
+        catch(Exception e){
+            System.out.print(e);
+        }
     }
     
     /**
      * Método imprimi no console todas as informações dos objetos
      * cadastrados na coleção.
      */
-    public void imprimirTodos() {   
+    public void imprimirTodos() 
+    {
+        try {
         collection.find().forEach(printBlock);
+        }
+        catch(Exception e) {
+            System.out.print(e);
+        }
     }
 
      /**
@@ -122,7 +134,14 @@ public class Colecao<T>
     public void adicionar(T obj) 
     {
         if (obj.getClass() == classType)
-            collection.insertOne(obj);
+        {
+            try {
+                collection.insertOne(obj);
+            }
+            catch(Exception e) {
+                System.out.print(e);
+            }
+        }
     }
     
     /**
