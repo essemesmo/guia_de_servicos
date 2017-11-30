@@ -1,6 +1,6 @@
-Arquivos .class estão em build/classes/guia_de_servicos
+Arquivos .class estão em build/classes/
 
-Arquivos .java estão em src/guia_de_servicos
+Arquivos .java estão em src/
 
 Arquvios .jar do MongoDB estão em lib/
 
@@ -12,17 +12,19 @@ Melhor FORMATO de diretórios:
 
                     /lib/ (arquivos .jar aqui)
                 
-                    /build/classes/guia_de_servicos/ (arquivos .class aqui)
+                    /build/classes /Modelo/ (arquivos .class aqui)
+                                   /Visualizacao/ (arquivos .class aqui)
+                                   /Controlador/ (arquivos .class aqui)
                 
-                    /src/guia_de_servicos/ (arquivos .java aqui)
+                    /src /Modelo/ (arquivos .java aqui)
+                         /Visualizacao/ (arquivos .java aqui)
+                         /Controlador/ (arquivos .java aqui)
                
 Para executar o programa com o FORMATO acima:
 
     1- Iniciar o serviço MongoDB em UM PROMPT SEPARADO em modo de PRIVILÉGIO. 
     
-    2- Em outro prompt cmd, vá para o diretório Guia_de_Servicos, exemplo de comando: cd C:\...\Guia_de_Servicos , sendo ... o caminho na sua maquina.
-    
-    3- execute o comando: java -cp lib\*;build\classes guia_de_servicos.GuiaMainApp
+    2- Executar o arquivo Guia_de_Servicos.jar , presente na pasta /jar/.
     
     4- O Menu do programa deve rodar em seguida.
     
