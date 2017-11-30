@@ -3,7 +3,7 @@ Arquivos .java do Projeto.
 Construtores: 
 
     classe Usuario, classe Prestador, classe Cliente, 
-    classe Banco, classe Colecao, classe MenuOperadorColecao.
+    classe Banco, classe Colecao.
 
 Sobrecarga de Métodos:
 
@@ -17,18 +17,6 @@ Container:
 
     ArrayList é utilizada na classe Colecao para carregar objetos na memória virtual para operações.
     
-Classe Abstrata:
-
-    Classes Login e MenuOperadorColecao herdam da classe abstrata Menu, implementando os métodos abstratos.
-    
-Interface:
-
-    Classe Pagamento implementa a interface Transferencia.
-    
-Genéricos:
-
-    Classe Colecao apresenta parâmetro de Tipo, assim generalizando a criação de ArrayList, coleções do MongoDB, 
-    em tempo de execução do programa.
 
 Polimorfismo:
 
