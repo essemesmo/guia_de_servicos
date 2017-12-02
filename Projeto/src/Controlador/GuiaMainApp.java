@@ -36,9 +36,7 @@ public class GuiaMainApp
         java.awt.EventQueue.invokeLater(() -> {
             new LoginMenu().setVisible(true);
         });    
-        
-        //Login login = new Login();
-        //login.validar("essemesmo", "pmf1708");
+    
         //banco.closeConnection(); não quer funcionar :(
     }    
 }

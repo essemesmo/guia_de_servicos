@@ -106,7 +106,6 @@ public class Cadastro
         }
         return false;
     }       
-
             
     private static final String nomesCol[] = {"clientes", "prestadores"};    
     private Usuario user;

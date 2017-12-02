@@ -47,17 +47,20 @@ public class Pagamento
      * Método transfere credito.
      * @param cliente Cliente que deve pagar.
      * @param prestador Prestador que deve receber.
+     * @return 
      */
-    public void transferir(Usuario cliente, Prestador prestador) 
+    public boolean transferir(Usuario cliente, Prestador prestador) 
     {
         double custo = prestador.getCusto() * getNumHoras();
         
         if (cliente.getSaldo() < custo) {
             System.out.print("Custo superior ao saldo");
+            return false;
         }
        
         cliente.setSaldo(cliente.getSaldo() - custo);
         prestador.setSaldo(prestador.getSaldo() + custo);
+        return true;
     }
     
     private double numHoras;
