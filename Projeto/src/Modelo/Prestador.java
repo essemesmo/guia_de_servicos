@@ -128,6 +128,24 @@ public class Prestador extends Usuario
     } 
     
     /**
+     * 
+     * @param documento 
+     */
+    @Override
+    public void preencherCampos(Document documento) 
+    {    
+        super.preencherCampos(documento);
+        
+        setCnpj(documento.getString("cnpj"));       
+        
+        setEspecificacao(documento.getString("especificacao"));
+
+        setDescricao(documento.getString("descricao"));
+ 
+        setCusto(documento.getDouble("custo"));
+    }     
+    
+    /**
      * Método sobrepõe ao da classe Usuario, retorna
      * as informações dos Prestadores de serviço.
      * @return String - informações da classe Prestador.

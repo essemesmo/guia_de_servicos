@@ -1,11 +1,10 @@
 package Modelo;
 
-import Controlador.Senha;
 import org.bson.Document;
 /**
 * Classe Usuario carrega as informações sobre básicas dos usuários.
 */
-public class Usuario 
+public abstract class Usuario 
 {
 
     /**
@@ -169,7 +168,26 @@ public class Usuario
         setEndereco(Console.getLine("Informe endereco: "));
         
         setRegiao(Console.getLine("Informe regiao: "));   
-    }    
+    } 
+    
+    public void preencherCampos(Document documento)
+    {
+        setNome(documento.getString("nome"));
+        
+        setUsername(documento.getString("_id"));
+                
+        setTelefone(documento.getString("telefone")); 
+        
+        setEmail(documento.getString("email"));
+        
+        setEndereco(documento.getString("endereco"));
+        
+        setRegiao(documento.getString("regiao"));  
+        
+        setSaldo(documento.getDouble("saldo"));
+        
+        setSenha(documento.getString("senha"));
+    }     
     
     /**
      * Construtor inicializa os atributos do objeto Usuario com valores 

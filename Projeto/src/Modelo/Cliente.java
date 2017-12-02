@@ -14,7 +14,7 @@ public class Cliente extends Usuario
     */
     public Cliente()
     {
-        cpf = "<nao informado>";
+        cpf = "<nao especificado>";
     }
     
     /**
@@ -43,6 +43,13 @@ public class Cliente extends Usuario
         super.preencherCampos();
         setCpf(Console.getLine("Informe cpf: "));
     }
+    
+    @Override
+    public void preencherCampos(Document documento) 
+    {    
+        super.preencherCampos(documento);
+        setCpf(documento.getString("cpf"));
+    }    
     
     /**
      * Método sobrepõe ao da classe Usuario, retorna
