@@ -84,16 +84,23 @@ public class OpcoesMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void logOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutButtonActionPerformed
+        this.dispose();
         new LoginMenu().setVisible(true);
     }//GEN-LAST:event_logOutButtonActionPerformed
 
     private void perfilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilButtonActionPerformed
-        if (Opcoes.identificarPerfil()) 
+        if (Opcoes.identificarPerfil()) {
+            this.dispose();
             new PerfilCliente().setVisible(true);
-        else new PerfilPrestador().setVisible(true);
+        }
+        else {
+            this.dispose();
+            new PerfilPrestador().setVisible(true);
+        }
     }//GEN-LAST:event_perfilButtonActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
+        this.dispose();
         new PesquisaMenu().setVisible(true);
     }//GEN-LAST:event_buscarButtonActionPerformed
 
