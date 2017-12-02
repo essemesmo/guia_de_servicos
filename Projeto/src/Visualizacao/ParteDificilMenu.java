@@ -5,6 +5,9 @@
  */
 package Visualizacao;
 
+import Controlador.Servicos;
+import Modelo.SessaoId;
+
 /**
  *
  * @author PMF
@@ -15,7 +18,19 @@ public class ParteDificilMenu extends javax.swing.JFrame {
      * Creates new form ParteDificilMenu
      */
     public ParteDificilMenu() {
+        servico = new Servicos();
         initComponents();
+        
+        buttonGroup1.add(j0Radio);
+        buttonGroup1.add(j1Radio);
+        buttonGroup1.add(j2Radio);
+        buttonGroup1.add(j3Radio);
+        buttonGroup1.add(j4Radio);
+        buttonGroup1.add(j5Radio);
+        
+        usernameClienteLabel.setText(SessaoId.getId());
+        
+        setar();
     }
 
     /**
@@ -27,22 +42,389 @@ public class ParteDificilMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        sairButton = new javax.swing.JButton();
+        usernameClienteLabel = new javax.swing.JLabel();
+        RsLabel = new javax.swing.JLabel();
+        saldoClienteLabel = new javax.swing.JLabel();
+        label = new javax.swing.JLabel();
+        voltarButton = new javax.swing.JButton();
+        usernameLabel = new javax.swing.JLabel();
+        usernameField = new javax.swing.JTextField();
+        nomeLabel = new javax.swing.JLabel();
+        nomeField = new javax.swing.JTextField();
+        cnpjLabel = new javax.swing.JLabel();
+        cnpjField = new javax.swing.JTextField();
+        emailLabel = new javax.swing.JLabel();
+        emailField = new javax.swing.JTextField();
+        telefoneLabel = new javax.swing.JLabel();
+        telefoneField = new javax.swing.JTextField();
+        enderecoLabel = new javax.swing.JLabel();
+        enderecoField = new javax.swing.JTextField();
+        regiaoLabel = new javax.swing.JLabel();
+        regiaoField = new javax.swing.JTextField();
+        especificacaoLabel = new javax.swing.JLabel();
+        especificacaoField = new javax.swing.JTextField();
+        descricaoLabel = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        descricaoBox = new javax.swing.JTextArea();
+        j1Radio = new javax.swing.JRadioButton();
+        j2Radio = new javax.swing.JRadioButton();
+        j3Radio = new javax.swing.JRadioButton();
+        j0Radio = new javax.swing.JRadioButton();
+        j4Radio = new javax.swing.JRadioButton();
+        j5Radio = new javax.swing.JRadioButton();
+        proximoButton = new javax.swing.JButton();
+        anteriorButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        rankLabel = new javax.swing.JLabel();
+        custoLabel = new javax.swing.JLabel();
+        custoServicoLabel = new javax.swing.JLabel();
+        Rs2Label = new javax.swing.JLabel();
+        pagarButton = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        sairButton.setText("Sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
+
+        usernameClienteLabel.setText("username");
+
+        RsLabel.setText("R$");
+
+        saldoClienteLabel.setText("000.000,00");
+
+        label.setText("Pesquisa:");
+
+        voltarButton.setText("Voltar");
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarButtonActionPerformed(evt);
+            }
+        });
+
+        usernameLabel.setText("Username");
+
+        usernameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameFieldActionPerformed(evt);
+            }
+        });
+
+        nomeLabel.setText("Nome");
+
+        cnpjLabel.setText("CNPJ");
+
+        emailLabel.setText("Email");
+
+        telefoneLabel.setText("Telefone");
+
+        enderecoLabel.setText("Endereço");
+
+        regiaoLabel.setText("Região");
+
+        especificacaoLabel.setText("Especificação");
+
+        descricaoLabel.setText("Descrição");
+
+        descricaoBox.setColumns(20);
+        descricaoBox.setRows(5);
+        jScrollPane1.setViewportView(descricaoBox);
+
+        j1Radio.setText("1");
+
+        j2Radio.setText("2");
+
+        j3Radio.setText("3");
+
+        j0Radio.setText("0");
+
+        j4Radio.setText("4");
+
+        j5Radio.setText("5");
+
+        proximoButton.setText("Proximo");
+        proximoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proximoButtonActionPerformed(evt);
+            }
+        });
+
+        anteriorButton.setText("Anterior");
+        anteriorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anteriorButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Classificação do Serviço:");
+
+        rankLabel.setText("---");
+
+        custoLabel.setText("Custo");
+
+        custoServicoLabel.setText("000.000,00");
+
+        Rs2Label.setText("R$");
+
+        pagarButton.setText("Contratar");
+        pagarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pagarButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(voltarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addComponent(usernameClienteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addComponent(RsLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(saldoClienteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79)
+                .addComponent(sairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(regiaoLabel)
+                            .addComponent(enderecoLabel)
+                            .addComponent(telefoneLabel)
+                            .addComponent(emailLabel)
+                            .addComponent(cnpjLabel)
+                            .addComponent(nomeLabel)
+                            .addComponent(usernameLabel)
+                            .addComponent(label)
+                            .addComponent(custoLabel)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(especificacaoLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(usernameField)
+                            .addComponent(nomeField)
+                            .addComponent(cnpjField)
+                            .addComponent(emailField)
+                            .addComponent(telefoneField)
+                            .addComponent(enderecoField)
+                            .addComponent(regiaoField)
+                            .addComponent(especificacaoField, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addComponent(descricaoLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Rs2Label)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(custoServicoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pagarButton)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(62, 62, 62)
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rankLabel))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(j0Radio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(j1Radio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(j2Radio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(j3Radio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(j4Radio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(j5Radio)
+                                .addGap(32, 32, 32)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(anteriorButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(proximoButton)
+                        .addGap(91, 91, 91))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(sairButton)
+                        .addComponent(saldoClienteLabel)
+                        .addComponent(RsLabel)
+                        .addComponent(usernameClienteLabel))
+                    .addComponent(voltarButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(label)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(usernameLabel)
+                            .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(descricaoLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nomeLabel)
+                            .addComponent(nomeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cnpjLabel)
+                            .addComponent(cnpjField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(emailLabel)
+                            .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(telefoneLabel)
+                            .addComponent(telefoneField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(enderecoLabel)
+                            .addComponent(enderecoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(regiaoLabel)
+                            .addComponent(regiaoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(especificacaoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(especificacaoLabel)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(rankLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(j1Radio)
+                            .addComponent(j2Radio)
+                            .addComponent(j3Radio)
+                            .addComponent(j0Radio)
+                            .addComponent(j4Radio)
+                            .addComponent(j5Radio))))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(anteriorButton)
+                    .addComponent(proximoButton)
+                    .addComponent(custoLabel)
+                    .addComponent(custoServicoLabel)
+                    .addComponent(Rs2Label)
+                    .addComponent(pagarButton))
+                .addGap(0, 25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameFieldActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        this.dispose();
+        new LoginMenu().setVisible(true);
+    }//GEN-LAST:event_sairButtonActionPerformed
+
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
+        this.dispose();
+        new OpcoesMenu().setVisible(true);
+    }//GEN-LAST:event_voltarButtonActionPerformed
+
+    private void proximoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximoButtonActionPerformed
+        servico.iterarLista(1);
+        setar();
+    }//GEN-LAST:event_proximoButtonActionPerformed
+
+    private void anteriorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorButtonActionPerformed
+        servico.iterarLista(-1);
+        setar();
+    }//GEN-LAST:event_anteriorButtonActionPerformed
+
+    private void pagarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagarButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pagarButtonActionPerformed
+
+    private void setar()
+    {
+        usernameField.setText(servico.prestador.getUsername());
+        nomeField.setText(servico.prestador.getNome());
+        cnpjField.setText(servico.prestador.getCnpj()); 
+        emailField.setText(servico.prestador.getEmail());  
+        telefoneField.setText(servico.prestador.getTelefone()); 
+        enderecoField.setText(servico.prestador.getEndereco());  
+        regiaoField.setText(servico.prestador.getRegiao());    
+        especificacaoField.setText(servico.prestador.getEspecificacao()); 
+        custoServicoLabel.setText(String.valueOf(servico.prestador.getCusto()));  
+        descricaoBox.setText(servico.prestador.getDescricao());
+        rankLabel.setText(String.valueOf(servico.prestador.getClassificacao()));        
+    }
+    
+    private final Servicos servico;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Rs2Label;
+    private javax.swing.JLabel RsLabel;
+    private javax.swing.JButton anteriorButton;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField cnpjField;
+    private javax.swing.JLabel cnpjLabel;
+    private javax.swing.JLabel custoLabel;
+    private javax.swing.JLabel custoServicoLabel;
+    private javax.swing.JTextArea descricaoBox;
+    private javax.swing.JLabel descricaoLabel;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JTextField enderecoField;
+    private javax.swing.JLabel enderecoLabel;
+    private javax.swing.JTextField especificacaoField;
+    private javax.swing.JLabel especificacaoLabel;
+    private javax.swing.JRadioButton j0Radio;
+    private javax.swing.JRadioButton j1Radio;
+    private javax.swing.JRadioButton j2Radio;
+    private javax.swing.JRadioButton j3Radio;
+    private javax.swing.JRadioButton j4Radio;
+    private javax.swing.JRadioButton j5Radio;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel label;
+    private javax.swing.JTextField nomeField;
+    private javax.swing.JLabel nomeLabel;
+    private javax.swing.JButton pagarButton;
+    private javax.swing.JButton proximoButton;
+    private javax.swing.JLabel rankLabel;
+    private javax.swing.JTextField regiaoField;
+    private javax.swing.JLabel regiaoLabel;
+    private javax.swing.JButton sairButton;
+    private javax.swing.JLabel saldoClienteLabel;
+    private javax.swing.JTextField telefoneField;
+    private javax.swing.JLabel telefoneLabel;
+    private javax.swing.JLabel usernameClienteLabel;
+    private javax.swing.JTextField usernameField;
+    private javax.swing.JLabel usernameLabel;
+    private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }

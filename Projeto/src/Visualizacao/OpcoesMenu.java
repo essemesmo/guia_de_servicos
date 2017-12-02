@@ -5,6 +5,7 @@
  */
 package Visualizacao;
 
+import Controlador.Opcoes;
 /**
  *
  * @author PMF
@@ -87,11 +88,13 @@ public class OpcoesMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_logOutButtonActionPerformed
 
     private void perfilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilButtonActionPerformed
-        new PerfilMenu().setVisible(true);
+        if (Opcoes.identificarPerfil()) 
+            new PerfilCliente().setVisible(true);
+        else new PerfilPrestador().setVisible(true);
     }//GEN-LAST:event_perfilButtonActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
-        new ParteDificilMenu().setVisible(true);
+        new PesquisaMenu().setVisible(true);
     }//GEN-LAST:event_buscarButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -6,6 +6,7 @@
 package Visualizacao;
 
 import Controlador.Cadastro;
+import Controlador.Opcoes;
 
 /**
  *
@@ -147,11 +148,13 @@ public class CadastroMenu extends javax.swing.JFrame {
 
     private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
         if (!cadastro.adicionar(usernameField.getText(), senhaField.getText()))
-            Mensagem.mostrarJanela("Username indisponivel");
-        
-        else {
+            Mensagem.mostrarJanela("Username indisponivel");        
+        else 
+        {
             this.dispose();
-            new OpcoesMenu().setVisible(true);
+            if (Opcoes.identificarPerfil())
+                new PerfilCliente().setVisible(true);
+            else new PerfilPrestador().setVisible(true);
         }
         usernameField.setText("");
         senhaField.setText("");
