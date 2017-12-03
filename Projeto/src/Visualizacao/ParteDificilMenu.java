@@ -20,16 +20,8 @@ public class ParteDificilMenu extends javax.swing.JFrame {
     public ParteDificilMenu() {
         servico = new Servicos();
         initComponents();
-        
-        buttonGroup1.add(j0Radio);
-        buttonGroup1.add(j1Radio);
-        buttonGroup1.add(j2Radio);
-        buttonGroup1.add(j3Radio);
-        buttonGroup1.add(j4Radio);
-        buttonGroup1.add(j5Radio);
-        
         usernameClienteLabel.setText(SessaoId.getId());
-        
+        saldoClienteLabel.setText(String.valueOf(servico.atualizarSaldoUsuario()));
         setar();
     }
 
@@ -69,12 +61,6 @@ public class ParteDificilMenu extends javax.swing.JFrame {
         descricaoLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         descricaoBox = new javax.swing.JTextArea();
-        j1Radio = new javax.swing.JRadioButton();
-        j2Radio = new javax.swing.JRadioButton();
-        j3Radio = new javax.swing.JRadioButton();
-        j0Radio = new javax.swing.JRadioButton();
-        j4Radio = new javax.swing.JRadioButton();
-        j5Radio = new javax.swing.JRadioButton();
         proximoButton = new javax.swing.JButton();
         anteriorButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -83,6 +69,8 @@ public class ParteDificilMenu extends javax.swing.JFrame {
         custoServicoLabel = new javax.swing.JLabel();
         Rs2Label = new javax.swing.JLabel();
         pagarButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        votosLabel = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -138,18 +126,6 @@ public class ParteDificilMenu extends javax.swing.JFrame {
         descricaoBox.setRows(5);
         jScrollPane1.setViewportView(descricaoBox);
 
-        j1Radio.setText("1");
-
-        j2Radio.setText("2");
-
-        j3Radio.setText("3");
-
-        j0Radio.setText("0");
-
-        j4Radio.setText("4");
-
-        j5Radio.setText("5");
-
         proximoButton.setText("Proximo");
         proximoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +156,10 @@ public class ParteDificilMenu extends javax.swing.JFrame {
                 pagarButtonActionPerformed(evt);
             }
         });
+
+        jLabel2.setText("Número de Votos:");
+
+        votosLabel.setText("312.432");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -235,34 +215,24 @@ public class ParteDificilMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(62, 62, 62)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rankLabel))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(j0Radio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(j1Radio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(j2Radio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(j3Radio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(j4Radio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(j5Radio)
-                                .addGap(32, 32, 32)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(anteriorButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(proximoButton)
-                        .addGap(91, 91, 91))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(anteriorButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(proximoButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(votosLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rankLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(75, 75, 75))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,19 +283,15 @@ public class ParteDificilMenu extends javax.swing.JFrame {
                             .addComponent(especificacaoLabel)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(rankLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(j1Radio)
-                            .addComponent(j2Radio)
-                            .addComponent(j3Radio)
-                            .addComponent(j0Radio)
-                            .addComponent(j4Radio)
-                            .addComponent(j5Radio))))
-                .addGap(41, 41, 41)
+                            .addComponent(rankLabel))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(votosLabel))
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(anteriorButton)
                     .addComponent(proximoButton)
@@ -364,7 +330,13 @@ public class ParteDificilMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_anteriorButtonActionPerformed
 
     private void pagarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagarButtonActionPerformed
-        // TODO add your handling code here:
+        if (servico.pagar()) {
+            saldoClienteLabel.setText(String.valueOf(servico.atualizarSaldoUsuario()));
+            this.dispose();
+            new ClassificarMenu().setVisible(true);
+        }
+        else Mensagem.mostrarJanela("Saldo insuficiente");
+
     }//GEN-LAST:event_pagarButtonActionPerformed
 
     private void setar()
@@ -379,7 +351,8 @@ public class ParteDificilMenu extends javax.swing.JFrame {
         especificacaoField.setText(servico.prestador.getEspecificacao()); 
         custoServicoLabel.setText(String.valueOf(servico.prestador.getCusto()));  
         descricaoBox.setText(servico.prestador.getDescricao());
-        rankLabel.setText(String.valueOf(servico.prestador.getClassificacao()));        
+        rankLabel.setText(String.valueOf(servico.prestador.getClassificacao()));
+        votosLabel.setText(String.valueOf(servico.prestador.getNumeroVotos()));
     }
     
     private final Servicos servico;
@@ -401,13 +374,8 @@ public class ParteDificilMenu extends javax.swing.JFrame {
     private javax.swing.JLabel enderecoLabel;
     private javax.swing.JTextField especificacaoField;
     private javax.swing.JLabel especificacaoLabel;
-    private javax.swing.JRadioButton j0Radio;
-    private javax.swing.JRadioButton j1Radio;
-    private javax.swing.JRadioButton j2Radio;
-    private javax.swing.JRadioButton j3Radio;
-    private javax.swing.JRadioButton j4Radio;
-    private javax.swing.JRadioButton j5Radio;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel label;
@@ -426,5 +394,6 @@ public class ParteDificilMenu extends javax.swing.JFrame {
     private javax.swing.JTextField usernameField;
     private javax.swing.JLabel usernameLabel;
     private javax.swing.JButton voltarButton;
+    private javax.swing.JLabel votosLabel;
     // End of variables declaration//GEN-END:variables
 }

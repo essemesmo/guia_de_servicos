@@ -19,6 +19,7 @@ public class PerfilPrestador extends javax.swing.JFrame {
         usernameLabel.setText(perfil.prestador.getUsername());
         saldoLabel.setText(String.valueOf(perfil.prestador.getSaldo()));
         RankLabel.setText(String.valueOf(perfil.prestador.getClassificacao()));
+        numVotosLabel.setText(String.valueOf(perfil.prestador.getNumeroVotos()));
         nomeField.setText(perfil.prestador.getNome());
         cnpjField.setText(perfil.prestador.getCnpj());
         emailField.setText(perfil.prestador.getEmail());
@@ -66,6 +67,8 @@ public class PerfilPrestador extends javax.swing.JFrame {
         clasLabel = new javax.swing.JLabel();
         RankLabel = new javax.swing.JLabel();
         okButton = new javax.swing.JButton();
+        votosLabel = new javax.swing.JLabel();
+        numVotosLabel = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -134,6 +137,10 @@ public class PerfilPrestador extends javax.swing.JFrame {
             }
         });
 
+        votosLabel.setText("Votos");
+
+        numVotosLabel.setText("324.432");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -173,13 +180,17 @@ public class PerfilPrestador extends javax.swing.JFrame {
                         .addComponent(clasLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(RankLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(votosLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(numVotosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(sairButton))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(descricaoLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 78, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(128, 128, 128)
                         .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -195,7 +206,9 @@ public class PerfilPrestador extends javax.swing.JFrame {
                         .addComponent(RsLabel)
                         .addComponent(saldoLabel)
                         .addComponent(clasLabel)
-                        .addComponent(RankLabel)))
+                        .addComponent(RankLabel)
+                        .addComponent(votosLabel)
+                        .addComponent(numVotosLabel)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -286,6 +299,7 @@ public class PerfilPrestador extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nomeField;
     private javax.swing.JLabel nomeLabel;
+    private javax.swing.JLabel numVotosLabel;
     private javax.swing.JButton okButton;
     private javax.swing.JTextField regiaoField;
     private javax.swing.JLabel regiaoLabel;
@@ -294,5 +308,6 @@ public class PerfilPrestador extends javax.swing.JFrame {
     private javax.swing.JTextField telefoneField;
     private javax.swing.JLabel telefoneLabel;
     private javax.swing.JLabel usernameLabel;
+    private javax.swing.JLabel votosLabel;
     // End of variables declaration//GEN-END:variables
 }

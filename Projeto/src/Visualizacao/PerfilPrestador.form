@@ -70,14 +70,18 @@
                       <Component id="clasLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="RankLabel" min="-2" pref="25" max="-2" attributes="0"/>
-                      <EmptySpace pref="235" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="votosLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="numVotosLabel" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="sairButton" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="descricaoLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="78" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
@@ -99,6 +103,8 @@
                       <Component id="saldoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="clasLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RankLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="votosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numVotosLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -303,6 +309,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="okButtonActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="votosLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Votos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numVotosLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="324.432"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
