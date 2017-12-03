@@ -1,6 +1,7 @@
 package Visualizacao;
 
 import Controlador.AtualizarPrestador;
+import Controlador.Formatacao;
 
 /**
  *
@@ -17,8 +18,8 @@ public class PerfilPrestador extends javax.swing.JFrame {
         initComponents();
         
         usernameLabel.setText(perfil.prestador.getUsername());
-        saldoLabel.setText(String.valueOf(perfil.prestador.getSaldo()));
-        RankLabel.setText(String.valueOf(perfil.prestador.getClassificacao()));
+        saldoLabel.setText(Formatacao.truncar(perfil.prestador.getSaldo()));
+        RankLabel.setText(Formatacao.truncar(perfil.prestador.getClassificacao()));
         numVotosLabel.setText(String.valueOf(perfil.prestador.getNumeroVotos()));
         nomeField.setText(perfil.prestador.getNome());
         cnpjField.setText(perfil.prestador.getCnpj());
@@ -27,7 +28,7 @@ public class PerfilPrestador extends javax.swing.JFrame {
         enderecoField.setText(perfil.prestador.getEndereco()); 
         regiaoField.setText(perfil.prestador.getRegiao()); 
         especificacaoField.setText(perfil.prestador.getEspecificacao());
-        custoField.setText(String.valueOf(perfil.prestador.getCusto()));
+        custoField.setText(Formatacao.truncar(perfil.prestador.getCusto()));
         descricaoArea.setText(perfil.prestador.getDescricao());
     }
 

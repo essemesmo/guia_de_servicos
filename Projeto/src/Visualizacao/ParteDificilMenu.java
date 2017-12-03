@@ -5,6 +5,7 @@
  */
 package Visualizacao;
 
+import Controlador.Formatacao;
 import Controlador.Servicos;
 import Modelo.SessaoId;
 
@@ -21,7 +22,7 @@ public class ParteDificilMenu extends javax.swing.JFrame {
         servico = new Servicos();
         initComponents();
         usernameClienteLabel.setText(SessaoId.getId());
-        saldoClienteLabel.setText(String.valueOf(servico.atualizarSaldoUsuario()));
+        saldoClienteLabel.setText(Formatacao.truncar(servico.atualizarSaldoUsuario()));
         setar();
     }
 
@@ -349,9 +350,9 @@ public class ParteDificilMenu extends javax.swing.JFrame {
         enderecoField.setText(servico.prestador.getEndereco());  
         regiaoField.setText(servico.prestador.getRegiao());    
         especificacaoField.setText(servico.prestador.getEspecificacao()); 
-        custoServicoLabel.setText(String.valueOf(servico.prestador.getCusto()));  
+        custoServicoLabel.setText(Formatacao.truncar(servico.prestador.getCusto()));  
         descricaoBox.setText(servico.prestador.getDescricao());
-        rankLabel.setText(String.valueOf(servico.prestador.getClassificacao()));
+        rankLabel.setText(Formatacao.truncar(servico.prestador.getClassificacao()));
         votosLabel.setText(String.valueOf(servico.prestador.getNumeroVotos()));
     }
     

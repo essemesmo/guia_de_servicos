@@ -1,6 +1,7 @@
 package Visualizacao;
 
 import Controlador.AtualizarCliente;
+import Controlador.Formatacao;
 
 /**
  *
@@ -17,7 +18,7 @@ public class PerfilCliente extends javax.swing.JFrame {
         initComponents();
         
         usernameLabel.setText(perfil.cliente.getUsername());
-        saldoLabel.setText(String.valueOf(perfil.cliente.getSaldo()));
+        saldoLabel.setText(Formatacao.truncar(perfil.cliente.getSaldo()));
         nomeField.setText(perfil.cliente.getNome());
         cpfField.setText(perfil.cliente.getCpf());
         emailField.setText(perfil.cliente.getEmail());
