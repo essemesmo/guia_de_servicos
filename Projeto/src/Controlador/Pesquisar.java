@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.Colecao;
 import Modelo.ListaPrestadores;
+import Modelo.SessaoId;
 import org.bson.Document;
 
 /**
@@ -23,7 +24,7 @@ public class Pesquisar
     public boolean procurar(int indexCampoBusca, Object valorBusca)
     {
         String campo = camposBusca[indexCampoBusca];
-        documentos = colecao.encontraMuitos(campo, valorBusca);
+        documentos = colecao.encontraMuitos(campo, valorBusca, SessaoId.getId());
         ListaPrestadores.setLista(documentos);
         
         return documentos.length != 0;

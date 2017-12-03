@@ -1,6 +1,8 @@
 package Controlador;
 
+import Modelo.Colecao;
 import Modelo.Prestador;
+import Modelo.SessaoId;
 import Modelo.Usuario;
 
 /**
@@ -8,50 +10,17 @@ import Modelo.Usuario;
  * Prestador.
  */
 public class Pagamento
-{
-
-    /**
-     * Método get do atributo numHoras.
-     * @return the numHoras.
-     */
-    public double getNumHoras() {
-        return numHoras;
-    }
-
-    /**
-     * Método set do atributo numHoras.
-     * @param numHoras the numHoras to set.
-     */
-    public void setNumHoras(double numHoras) {
-        this.numHoras = numHoras;
-    }
-    
-    /**
-     * Construtor com entrada de horas prestadas para calcular
-     * custo a ser pago pelo serviço.
-     * @param numHoras 
-     */
-    public Pagamento(int numHoras) {
-        this.numHoras = numHoras;
-    }
-    
-    /**
-     * Construtor sem entrada de horas prestadas para calcular
-     * custo a ser pago pelo serviço.
-     */
-    public Pagamento() {
-        this.numHoras = 1;
-    }    
-    
+{      
     /**
      * Método transfere credito.
      * @param cliente Cliente que deve pagar.
      * @param prestador Prestador que deve receber.
+     * @param numHoras
      * @return 
      */
-    public boolean transferir(Usuario cliente, Prestador prestador) 
+    public static boolean transferir(Usuario cliente, Prestador prestador, int numHoras) 
     {
-        double custo = prestador.getCusto() * getNumHoras();
+        double custo = prestador.getCusto() * numHoras;
         
         if (cliente.getSaldo() < custo) {
             System.out.print("Custo superior ao saldo");
@@ -63,5 +32,30 @@ public class Pagamento
         return true;
     }
     
-    private double numHoras;
-}
+     /**
+     * Método transfere credito.
+     * @param usuario
+     * @param prestador Prestador que deve receber.
+     * @return 
+     */
+    public static boolean transferir(Usuario usuario, Prestador prestador) 
+    {
+        double custo = prestador.getCusto();
+        
+        if (usuario.getSaldo() < custo) {
+            System.out.print("Custo superior ao saldo");
+            return false;
+        }
+       
+        usuario.setSaldo(usuario.getSaldo() - custo);
+        prestador.setSaldo(prestador.getSaldo() + custo);
+        
+        Colecao colecao = new Colecao("prestadores");
+        colecao.atualizarUm("_id", prestador.getUsername(), "saldo", prestador.getSaldo());
+        
+        colecao = new Colecao(SessaoId.getTipoUsuario());
+        colecao.atualizarUm("_id", usuario.getUsername(), "saldo", usuario.getSaldo());
+        
+        return true;
+    }       
+ }
