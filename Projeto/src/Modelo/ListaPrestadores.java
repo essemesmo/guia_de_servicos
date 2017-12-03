@@ -8,6 +8,20 @@ import org.bson.Document;
  */
 public class ListaPrestadores 
 {
+
+    /**
+     * @return the index
+     */
+    public static int getIndex() {
+        return index;
+    }
+
+    /**
+     * @param aIndex the index to set
+     */
+    public static void setIndex(int aIndex) {
+        index = aIndex;
+    }
     /**
      * 
      * @param lista 
@@ -40,4 +54,5 @@ public class ListaPrestadores
     }
     
     private static Document[] documentos;
+    private static int index;
 }

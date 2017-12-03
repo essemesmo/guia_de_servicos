@@ -14,11 +14,11 @@ public class Prestador extends Usuario
     */
     public Prestador()
     {
+        rank = new Rank();
         String txt = "<nao especificado>";
         this.cnpj = txt;
         this.especificacao = txt;
         this.descricao = txt;
-        this.classificacao = 0;
         this.custo = 1.0;        
     }
 
@@ -91,23 +91,7 @@ public class Prestador extends Usuario
      */
     public final void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }    
-    
-    /**
-     * Método get do atributo classificacao.
-     * @return String - valor do atributo classificacao.
-     */    
-    public final double getClassificacao() {
-        return classificacao;
-    }    
-    
-    /**
-     * Método set do atributo classificacao.
-     * @param classificacao valor do atributo classificacao.
-     */
-    public final void setClassificacao(double classificacao) {
-        this.classificacao = classificacao;
-    }   
+    }       
 
     /**
      * Método sobrepõe ao da classe Usuario, lê as entradas de
@@ -125,6 +109,12 @@ public class Prestador extends Usuario
         setDescricao(Console.getLine("Informe descricao: "));
  
         setCusto(Console.getDouble("Informe custo: "));
+        
+        rank.setClassificacao(Console.getDouble("Informe classificacao: "));
+        
+        rank.setTotal(Console.getDouble("Informe total: "));        
+        
+        rank.setNumeroVotos((int)Console.getDouble("Informe numero de votos: "));
     } 
     
     /**
@@ -143,6 +133,14 @@ public class Prestador extends Usuario
         setDescricao(documento.getString("descricao"));
  
         setCusto(documento.getDouble("custo"));
+        
+        Document d = (Document) documento.get("rank");
+        
+        rank.setTotal(d.getDouble("total"));        
+        
+        rank.setClassificacao(d.getDouble("classificacao"));
+        
+        rank.setNumeroVotos(d.getInteger("votos"));
     }     
     
     /**
@@ -162,7 +160,7 @@ public class Prestador extends Usuario
             + "Custo: %.2f\n"
             + "Descricao: %s\n"
             , super.toString(), getCnpj(), getEspecificacao()
-            , getClassificacao(), getCusto(), getDescricao()
+            , rank.getClassificacao(), getCusto(), getDescricao()
         );
     }
     
@@ -178,15 +176,32 @@ public class Prestador extends Usuario
         prestador.append("custo", custo)
                 .append("cnpj", cnpj)
                 .append("especificacao", especificacao)
-                .append("classificacao", classificacao)
+                .append("rank", rank.criarDoc())
                 .append("descricao", descricao);
                 
         return prestador;
     }
     
+    /**
+     * 
+     * @return 
+     */
+    public double getClassificacao() {
+        return rank.getClassificacao();
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public int getNumeroVotos() {
+        return rank.getNumeroVotos();
+    }
+    
+    public final Rank rank;
+    
     private double custo;
     private String cnpj;
     private String especificacao;
     private String descricao;
-    private double classificacao;     
 }

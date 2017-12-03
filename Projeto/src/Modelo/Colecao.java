@@ -112,6 +112,22 @@ public class Colecao
      * 
      * @param campoBusca
      * @param valorBusca
+     * @param excluir
+     * @return 
+     */
+    public Document[] encontraMuitos(String campoBusca, Object valorBusca, Object excluir)
+    {
+        colecao.find(and(eq(campoBusca, valorBusca),ne("_id",excluir))).forEach(carregarLista);
+        Document[] documentos = new Document[lista.size()];
+        documentos = lista.toArray(documentos);
+        lista.clear();
+        return documentos;
+    }
+    
+    /**
+     * 
+     * @param campoBusca
+     * @param valorBusca
      * @return 
      */
     public Document[] encontraMuitos(String campoBusca, Object valorBusca)
@@ -121,7 +137,8 @@ public class Colecao
         documentos = lista.toArray(documentos);
         lista.clear();
         return documentos;
-    }
+    }    
+    
     
     /**
      * 
