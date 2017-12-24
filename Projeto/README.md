@@ -23,6 +23,7 @@ FORMATO de diretórios:
 1- Iniciar o serviço MongoDB em UM PROMPT SEPARADO em modo de PRIVILÉGIO. 
     
 2- Executar o arquivo Guia_de_Servicos.jar presente na pasta Projeto.
+
         ** Importante existir o sub-diretório /lib com os drivers para a
         ** aplicação funcionar.
     
