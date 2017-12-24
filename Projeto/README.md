@@ -7,8 +7,9 @@ Guia_de_Servicos.jar está na pasta Projeto/jar
 FORMATO de diretórios:
 
     Guia_de_Servicos/
-
-                    /lib/ (arquivos .jar aqui)
+                    Guia_de_Servicos.jar (.jar executável)
+                    
+                    /lib/ (drivers do MongoDB .jar aqui)
                 
                     /build/classes /Modelo/ (arquivos .class aqui)
                                    /Visualizacao/ (arquivos .class aqui)
@@ -22,6 +23,8 @@ FORMATO de diretórios:
 1- Iniciar o serviço MongoDB em UM PROMPT SEPARADO em modo de PRIVILÉGIO. 
     
 2- Executar o arquivo Guia_de_Servicos.jar , presente na pasta /jar/.
+        ** Importante existir o sub-diretório /lib com os drivers para a
+        ** aplicação funcionar.
     
 4- O Menu do programa deve rodar em seguida.
     
