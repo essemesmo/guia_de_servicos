@@ -29,7 +29,7 @@ public class Senha
             MessageDigest digest = MessageDigest.getInstance("MD5");
             digest.update(saltedAndHashed.getBytes());
             byte hashedBytes[] = (new String(digest.digest(), "UTF-8")).getBytes();
-            return Arrays.toString(Base64.getEncoder().encode(hashedBytes)) + "," + salt;
+            return Base64.getEncoder().encodeToString(hashedBytes) + "," + salt;
             
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException("MD5 is not available", e);
@@ -51,7 +51,7 @@ public class Senha
             MessageDigest digest = MessageDigest.getInstance("MD5");
             digest.update(saltedAndHashed.getBytes());
             byte hashedBytes[] = (new String(digest.digest(), "UTF-8")).getBytes();
-            return Arrays.toString(Base64.getEncoder().encode(hashedBytes)) + "," + salt;
+            return Base64.getEncoder().encodeToString(hashedBytes) + "," + salt;
             
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException("MD5 is not available", e);
